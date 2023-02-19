@@ -13,6 +13,7 @@
         stage('Test') {
             steps {  
                 echo 'Testing..'
+                echo '$BRANCH'
             }
         }
         stage('Deploy') {
