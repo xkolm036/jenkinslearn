@@ -13,7 +13,7 @@
         stage('Test') {
             steps {  
                 echo 'Testing..'
-                echo '$BRANCH'
+                echo "The value of the ENV parameter is: ${params.BRANCH}"
             }
         }
         stage('Deploy') {
