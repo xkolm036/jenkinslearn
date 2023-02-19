@@ -4,7 +4,7 @@
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Buildingwww..'
             }
         }
         stage('Test') {
