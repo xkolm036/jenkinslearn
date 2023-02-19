@@ -1,6 +1,9 @@
  pipeline {
     agent any
+    parameters{
+        choice(name: 'BRANCH', choices: ['Master', 'Dev'], description: 'Choose branch')
 
+    }
     stages {
         stage('Build') {
             steps {
@@ -8,8 +11,7 @@
             }
         }
         stage('Test') {
-            steps {
-                choice(name: 'BRANCH', choices: ['Master', 'Dev'])
+            steps {  
                 echo 'Testing..'
             }
         }
