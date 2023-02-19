@@ -9,6 +9,7 @@
         }
         stage('Test') {
             steps {
+                choice(name: 'BRANCH', choices: ['Master', 'Dev'])
                 echo 'Testing..'
             }
         }
